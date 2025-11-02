@@ -17,7 +17,6 @@ It supports:
 * Embedded channel icon in the Emby dashboard
 * Configurable channel display name (via Web UI)
 * Fully compliant with Emby 4.8–4.9 SDK
-  *(no Jellyfin, no ASP.NET Core attributes, no RequestContext dependencies)*
 
 ---
 
@@ -110,26 +109,7 @@ Selecting **Movies** opens a playable list of M3U entries.
 
 ---
 
-## 🔧 Building
-
-Requirements:
-
-* .NET 6 SDK
-* Reference Emby assemblies from your local server installation:
-
-  ```
-  MediaBrowser.Controller.dll
-  MediaBrowser.Model.dll
-  MediaBrowser.Common.dll
-  ```
-
-Compile with:
-
-```bash
-dotnet build -c Release
-```
-
-Copy the resulting `Emby.Plugins.M3uChannelProvider.dll` to:
+Copy `Emby.Plugins.M3uChannelProvider.dll` to:
 
 ```
 %AppData%\Emby-Server\programdata\plugins\
